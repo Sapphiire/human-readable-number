@@ -40,12 +40,13 @@ module.exports = function toReadable (number) {
   const digit = number % 10
   if(hundreds) result.push(beforeDecades[hundreds]).push('hundred');
   
-  if(decade != 0)
+  if(decade != 0) {
     if(decade <= 19) result.push(beforeDecades[decade]);
     else {
         result.push(decades[Math.floor(decade/10) - 1]);
         if(digit) result.push(beforeDecades[digit]);
     }
+  }
   
   return result.join(' ')
 }
