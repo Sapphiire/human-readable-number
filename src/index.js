@@ -8,6 +8,7 @@ module.exports = function toReadable (number) {
       'four',
       'five',
       'six',
+      'seven',
       'eight',
       'nine',
       'ten',
