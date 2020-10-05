@@ -16,7 +16,7 @@ module.exports = function toReadable (number) {
         'twelve',
         'thirteen',
         'fourteen',
-        'fithteen',
+        'fifteen',
         'sixteen',
         'seventeen',
         'eighteen',
@@ -33,13 +33,11 @@ module.exports = function toReadable (number) {
         'eighty',
         'ninety'
     ]
-
     let result = []
     const hundreds = Math.floor(number / 100)
     const decade = number % 100
     const digit = number % 10
     if(hundreds) result.push(beforeDecades[hundreds] + ' hundred');
-
     if(decade != 0) {
         if(decade <= 19) result.push(beforeDecades[decade]);
         else {
@@ -47,6 +45,5 @@ module.exports = function toReadable (number) {
             if(digit) result.push(beforeDecades[digit]);
         }
     }
-
     return result.join(' ')
 }
